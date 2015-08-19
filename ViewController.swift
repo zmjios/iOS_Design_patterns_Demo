@@ -12,14 +12,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var tableView:UITableView!
     var dataSource:Array<CellItem> = []
-    var nameList = ["工厂方法","单例"]
-    var viewControlles = ["FactoryViewController","SingletonViewController"]
+    var nameList = ["工厂方法","单例","构建者"]
+    var viewControlles = ["FactoryViewController","SingletonViewController","BuilderViewController"]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.navigationItem.title = "常用设计模式举例"
         
         for var index = 0; index < nameList.count; ++index{
             
