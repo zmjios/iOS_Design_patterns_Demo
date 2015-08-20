@@ -31,8 +31,6 @@ class TCiPhoneBuilder {
         
         return iPhone6;
     }
-    
-    
 }
 
 class TCiPhone {
