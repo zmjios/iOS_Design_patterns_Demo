@@ -1,30 +1,32 @@
 //
-//  BaseViewController.swift
+//  BridgeViewController.swift
 //  iOS_Design_patterns_Demo
 //
-//  Created by 曾明剑 on 15/8/19.
+//  Created by 曾明剑 on 15/8/21.
 //  Copyright © 2015年 zmj. All rights reserved.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BridgeViewController: BaseViewController {
 
-    var label:UILabel?
-    var naviTitle:String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.navigationItem.title = self.naviTitle
-        
-        self.label = UILabel(frame: CGRectMake(10, 100, UIScreen.mainScreen().bounds.size.width - 20, 400))
-        self.view.addSubview(self.label!)
-        self.label?.numberOfLines = 0
 
         // Do any additional setup after loading the view.
+        
+        let qq = QQ()
+        let wechat = Wechat()
+        let iphone = iPhone(soft: qq)
+        let sum = Sumsung(soft: qq)
+
+        
+        let playQQIniPhone = iphone.playSoft()
+        let playQQInSum = sum.playSoft()
+        let playWechatIniPhone = iPhone(soft: wechat).playSoft()
+        
+        self.label?.text = "playQQIniPhone = \(playQQIniPhone) \n\rplayQQInSum = \(playQQInSum)\n\r playWechatIniPhone = \(playWechatIniPhone)"
+        
     }
 
     override func didReceiveMemoryWarning() {
