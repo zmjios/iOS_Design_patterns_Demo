@@ -12,10 +12,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var tableView:UITableView!
     var dataSource:Array<CellItem> = []
-    var nameList = ["工厂方法","单例","构建者","适配器","桥接","外观","命令","装饰器","职责链"]
+    var nameList = ["工厂方法","单例","构建者","适配器","桥接","外观","命令","装饰器","职责链","策略"]
     var viewControlles = ["FactoryViewController","SingletonViewController","BuilderViewController",
                             "AdapterViewController","BridgeViewController","FacadeViewController",
-                            "CommandViewController","DecoratorViewController","ChainOfResViewController"]
+                            "CommandViewController","DecoratorViewController","ChainOfResViewController",
+                            "StrategyViewController"]
     
 
     override func viewDidLoad() {
