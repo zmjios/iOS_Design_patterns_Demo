@@ -1,31 +1,23 @@
 //
-//  BaseViewController.swift
+//  CommandViewController.swift
 //  iOS_Design_patterns_Demo
 //
-//  Created by 曾明剑 on 15/8/19.
+//  Created by 曾明剑 on 15/8/23.
 //  Copyright © 2015年 zmj. All rights reserved.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class CommandViewController: BaseViewController {
 
-    var label:UILabel?
-    var naviTitle:String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.navigationItem.title = self.naviTitle
-        
-        self.label = UILabel(frame: CGRectMake(10, 100, UIScreen.mainScreen().bounds.size.width - 20, 400))
-        self.view.addSubview(self.label!)
-        self.label?.textAlignment = NSTextAlignment.Center
-        self.label?.numberOfLines = 0
 
         // Do any additional setup after loading the view.
+        
+        Client.pressSwitch()
+        
+        self.label!.text = "具体结果参考输出栏"
     }
 
     override func didReceiveMemoryWarning() {

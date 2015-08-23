@@ -12,9 +12,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var tableView:UITableView!
     var dataSource:Array<CellItem> = []
-    var nameList = ["工厂方法","单例","构建者","适配器","桥接","外观"]
+    var nameList = ["工厂方法","单例","构建者","适配器","桥接","外观","命令","装饰器","职责链"]
     var viewControlles = ["FactoryViewController","SingletonViewController","BuilderViewController",
-                            "AdapterViewController","BridgeViewController","FacadeViewController"]
+                            "AdapterViewController","BridgeViewController","FacadeViewController",
+                            "CommandViewController","DecoratorViewController","ChainOfResViewController"]
     
 
     override func viewDidLoad() {
@@ -35,8 +36,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:"cellId")
-        
-        
+    
     }
 
     override func didReceiveMemoryWarning() {

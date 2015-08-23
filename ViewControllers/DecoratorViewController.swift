@@ -1,31 +1,27 @@
 //
-//  BaseViewController.swift
+//  DecoratorViewController.swift
 //  iOS_Design_patterns_Demo
 //
-//  Created by 曾明剑 on 15/8/19.
+//  Created by 曾明剑 on 15/8/23.
 //  Copyright © 2015年 zmj. All rights reserved.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class DecoratorViewController: BaseViewController {
 
-    var label:UILabel?
-    var naviTitle:String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.navigationItem.title = self.naviTitle
-        
-        self.label = UILabel(frame: CGRectMake(10, 100, UIScreen.mainScreen().bounds.size.width - 20, 400))
-        self.view.addSubview(self.label!)
-        self.label?.textAlignment = NSTextAlignment.Center
-        self.label?.numberOfLines = 0
 
         // Do any additional setup after loading the view.
+        
+        
+        let text = "hello Swift"
+        
+        if text.containsIgnoreCase("swift"){
+            self.label!.text = "I love Swift"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
