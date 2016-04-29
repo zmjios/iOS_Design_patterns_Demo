@@ -25,7 +25,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         self.navigationItem.title = "常用设计模式举例"
         
-        for var index = 0; index < nameList.count; ++index{
+        for index in 0 ..< nameList.count{
             
             let item = CellItem()
             item.text = nameList[index]

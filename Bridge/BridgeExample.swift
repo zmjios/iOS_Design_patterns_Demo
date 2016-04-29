@@ -43,7 +43,7 @@ class iPhone:PhoneProtocol {
     
 }
 
-class Sumsung {
+class Sumsung:PhoneProtocol {
     
     var phoneName = "Sumsung"
     
